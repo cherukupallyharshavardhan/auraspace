@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA SPACE </title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-       body { 
-    font-family: 'Poppins', sans-serif; 
-    background-color: #F9F5EB; 
-    color: #4A3728; 
-    scroll-behavior: smooth; 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURA SPACE</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+body { 
+  font-family: 'Poppins', sans-serif; 
+  background-color: #F9F5EB; 
+  color: #4A3728; 
+  scroll-behavior: smooth; 
 }
 
 h1, h2, h3, .serif { 
-    font-family: 'Montserrat', sans-serif; 
+  font-family: 'Montserrat', sans-serif; 
 }
 
-        .bg-aura-brown { background-color: #8B6244; }
-        .text-aura-brown { color: #8B6244; }
-        .border-aura-brown { border-color: #8B6244; }
-        .btn-shadow { box-shadow: 0 4px 14px 0 rgba(139, 98, 68, 0.3); }
-        /* ===== SAFE TEXT ANIMATIONS ===== */
+.bg-aura-brown { background-color: #8B6244; }
+.text-aura-brown { color: #8B6244; }
+.border-aura-brown { border-color: #8B6244; }
+.btn-shadow { box-shadow: 0 4px 14px 0 rgba(139, 98, 68, 0.3); }
+
+/* ===== SAFE TEXT ANIMATIONS ===== */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -46,64 +49,71 @@ h1, h2, h3, .serif {
 .delay-200 { animation-delay: .2s; }
 .delay-400 { animation-delay: .4s; }
 .delay-600 { animation-delay: .6s; }
-    </style>
+</style>
 </head>
+
 <body>
 
-    <header class="sticky top-0 z-50 bg-[#F9F5EB]/90 backdrop-blur-md border-b border-stone-200">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-widest text-aura-brown serif">AURA SPACE</div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wider">
-                <a href="#home" class="hover:text-aura-brown transition">Home</a>
-                <a href="#about" class="hover:text-aura-brown transition">About</a>
-                <a href="#services" class="hover:text-aura-brown transition">Services</a>
-                <a href="#process" class="hover:text-aura-brown transition">Process</a>
-                <a href="#portfolio" class="hover:text-aura-brown transition">Portfolio</a>
-                <a href="#feedback" class="hover:text-aura-brown transition">Feedback</a>
-                <a href="#contact" class="hover:text-aura-brown transition">Contact</a>
-            </div>
-            <a href="#contact" class="bg-aura-brown text-white px-6 py-2 rounded shadow-lg hover:bg-[#725038] transition font-medium">Get Started</a>
-        </nav>
-    </header>
+<!-- HEADER -->
+<header class="sticky top-0 z-50 bg-[#F9F5EB]/90 backdrop-blur-md border-b border-stone-200">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="text-2xl font-bold tracking-widest text-aura-brown serif animate-left">AURA SPACE</div>
+<div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wider">
+<a href="#home" class="hover:text-aura-brown transition">Home</a>
+<a href="#about" class="hover:text-aura-brown transition">About</a>
+<a href="#services" class="hover:text-aura-brown transition">Services</a>
+<a href="#process" class="hover:text-aura-brown transition">Process</a>
+<a href="#portfolio" class="hover:text-aura-brown transition">Portfolio</a>
+<a href="#feedback" class="hover:text-aura-brown transition">Feedback</a>
+<a href="#contact" class="hover:text-aura-brown transition">Contact</a>
+</div>
+<a href="#contact" class="bg-aura-brown text-white px-6 py-2 rounded shadow-lg hover:bg-[#725038] transition font-medium">
+Get Started
+</a>
+</nav>
+</header>
 
-    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <h1 class="text-6xl md:text-8xl text-aura-brown mb-4">AURA SPACE</h1>
-        <p class="italic text-2xl md:text-2xl text-stone-600 mb-4">Designing homes with trust and care</p>
-        <p class="max-w-2xl text-lg text-stone-500 mb-12">Crafting elegant, functional interiors for residential & commercial spaces</p>
-        
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
-            <span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Interiors</span>
-            <span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Decor</span>
-            <span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Custom Furniture</span>
-        </div>
+<!-- HERO -->
+<section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
+<h1 class="text-6xl md:text-8xl text-aura-brown mb-4 animate-fadeUp">
+AURA SPACE
+</h1>
+<p class="italic text-2xl text-stone-600 mb-4 animate-fadeUp delay-200">
+Designing homes with trust and care
+</p>
+<p class="max-w-2xl text-lg text-stone-500 mb-12 animate-fadeUp delay-400">
+Crafting elegant, functional interiors for residential & commercial spaces
+</p>
 
-        <div class="flex flex-col md:row gap-4">
-            <div class="flex gap-4">
-                <a href="#contact" class="bg-aura-brown text-white px-10 py-4 rounded flex items-center gap-2 btn-shadow hover:scale-105 transition">
-                    Start Your Project <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                </a>
-                <a href="#portfolio" class="border border-aura-brown text-aura-brown px-10 py-4 rounded flex items-center gap-2 hover:bg-white transition">
-                    View Our Work <i data-lucide="sparkles" class="w-5 h-5"></i>
-                </a>
-            </div>
-        </div>
-        <div class="mt-20 animate-bounce">
-            <i data-lucide="mouse" class="text-aura-brown w-8 h-8"></i>
-        </div>
-    </section>
+<div class="flex flex-wrap justify-center gap-4 mb-12 animate-fadeUp delay-600">
+<span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Interiors</span>
+<span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Decor</span>
+<span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Custom Furniture</span>
+</div>
 
-    <section id="about" class="py-24 bg-white">
-      <div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-      <div>
-      <h2 class="text-4xl mb-6">About AURA SPACE</h2>
-      <p class="text-stone-600 mb-6">
-      We design elegant, functional interiors that reflect your lifestyle. From concept to execution, we handle everything.
-      </p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800" class="rounded-3xl shadow-lg">
-      </div>
-      </section>
-                   
+<div class="flex gap-4 animate-zoom delay-600">
+<a href="#contact" class="bg-aura-brown text-white px-10 py-4 rounded flex items-center gap-2 btn-shadow hover:scale-105 transition">
+Start Your Project <i data-lucide="arrow-right"></i>
+</a>
+<a href="#portfolio" class="border border-aura-brown text-aura-brown px-10 py-4 rounded flex items-center gap-2 hover:bg-white transition">
+View Our Work <i data-lucide="sparkles"></i>
+</a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 bg-white">
+<div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl mb-6 animate-left">About AURA SPACE</h2>
+<p class="text-stone-600 mb-6 animate-fadeUp delay-200">
+We design elegant, functional interiors that reflect your lifestyle.
+</p>
+</div>
+<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800"
+class="rounded-3xl shadow-lg animate-zoom">
+</div>
+</section>  
 
     <section id="services" class="py-24">
         <div class="container mx-auto px-6 text-center">
@@ -604,6 +614,7 @@ function sendToWhatsApp() {
 </body>
 
 </html>
+
 
 
 
