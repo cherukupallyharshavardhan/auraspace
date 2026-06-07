@@ -1,632 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AURA SPACE</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
-
-<style>
-body { 
-  font-family: 'Poppins', sans-serif; 
-  background-color: #F9F5EB; 
-  color: #4A3728; 
-  scroll-behavior: smooth; 
-}
-
-h1, h2, h3, .serif { 
-  font-family: 'Montserrat', sans-serif; 
-}
-
-.bg-aura-brown { background-color: #8B6244; }
-.text-aura-brown { color: #8B6244; }
-.border-aura-brown { border-color: #8B6244; }
-.btn-shadow { box-shadow: 0 4px 14px 0 rgba(139, 98, 68, 0.3); }
-
-/* ===== SAFE TEXT ANIMATIONS ===== */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeLeft {
-  from { opacity: 0; transform: translateX(-40px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-@keyframes softZoom {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.animate-fadeUp { animation: fadeUp 1s ease forwards; }
-.animate-left { animation: fadeLeft 1s ease forwards; }
-.animate-zoom { animation: softZoom 0.8s ease forwards; }
-
-.delay-200 { animation-delay: .2s; }
-.delay-400 { animation-delay: .4s; }
-.delay-600 { animation-delay: .6s; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA SPACE interior & decor | Home Interiors & Decor</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="AURA SPACE interior and decor home">
+      <span class="brand-mark">A</span>
+      <span>AURA SPACE <small>interior & decor</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#services">Interiors</a>
+      <a href="#gallery">Projects</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Packages</a>
+    </nav>
+    <a class="header-cta" href="#consultation">Start quote</a>
+  </header>
 
-<!-- HEADER -->
-<header class="sticky top-0 z-50 bg-[#F9F5EB]/90 backdrop-blur-md border-b border-stone-200">
-<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-<div class="text-2xl font-bold tracking-widest text-aura-brown serif animate-left">AURA SPACE</div>
-<div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wider">
-<a href="#home" class="hover:text-aura-brown transition">Home</a>
-<a href="#about" class="hover:text-aura-brown transition">About</a>
-<a href="#services" class="hover:text-aura-brown transition">Services</a>
-<a href="#process" class="hover:text-aura-brown transition">Process</a>
-<a href="#portfolio" class="hover:text-aura-brown transition">Portfolio</a>
-<a href="#feedback" class="hover:text-aura-brown transition">Feedback</a>
-<a href="#contact" class="hover:text-aura-brown transition">Contact</a>
-</div>
-<a href="#contact" class="bg-aura-brown text-white px-6 py-2 rounded shadow-lg hover:bg-[#725038] transition font-medium">
-Get Started
-</a>
-</nav>
-</header>
-
-<!-- HERO -->
-<section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-<h1 class="text-6xl md:text-8xl text-aura-brown mb-4 animate-fadeUp">
-AURA SPACE
-</h1>
-<p class="italic text-2xl text-stone-600 mb-4 animate-fadeUp delay-200">
-Designing homes with trust and care
-</p>
-<p class="max-w-2xl text-lg text-stone-500 mb-12 animate-fadeUp delay-400">
-Crafting elegant, functional interiors for residential & commercial spaces
-</p>
-
-<div class="flex flex-wrap justify-center gap-4 mb-12 animate-fadeUp delay-600">
-<span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Interiors</span>
-<span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Decor</span>
-<span class="px-8 py-3 bg-white/50 border border-stone-300 rounded-full">Custom Furniture</span>
-</div>
-
-<div class="flex gap-4 animate-zoom delay-600">
-<a href="#contact" class="bg-aura-brown text-white px-10 py-4 rounded flex items-center gap-2 btn-shadow hover:scale-105 transition">
-Start Your Project <i data-lucide="arrow-right"></i>
-</a>
-<a href="#portfolio" class="border border-aura-brown text-aura-brown px-10 py-4 rounded flex items-center gap-2 hover:bg-white transition">
-View Our Work <i data-lucide="sparkles"></i>
-</a>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-24 bg-white">
-<div class="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-<div>
-<h2 class="text-4xl mb-6 animate-left">About AURA SPACE</h2>
-<p class="text-stone-600 mb-6 animate-fadeUp delay-200">
-We design elegant, functional interiors that reflect your lifestyle.
-</p>
-</div>
-<img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800"
-class="rounded-3xl shadow-lg animate-zoom">
-</div>
-</section>  
-
-    <section id="services" class="py-24">
-        <div class="container mx-auto px-6 text-center">
-            <span class="bg-white/50 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded">What We Offer</span>
-            <h2 class="text-4xl md:text-5xl mt-6 mb-4">Our Services</h2>
-            <p class="text-stone-500 mb-16">Comprehensive interior design solutions tailored to your unique vision</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition group">
-                    <div class="bg-stone-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:bg-aura-brown transition">
-                        <i data-lucide="palette" class="text-aura-brown group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Interior Design Consultation</h3>
-                    <p class="text-stone-500">Personalized design solutions tailored to your space and style preferences.</p>
-                </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition group">
-                    <div class="bg-stone-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:bg-aura-brown transition">
-                        <i data-lucide="chef-hat" class="text-aura-brown group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Modular Kitchen & Wardrobes</h3>
-                    <p class="text-stone-500">Custom-designed, space-efficient solutions with premium finishes.</p>
-                </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition group border-b-4 border-aura-brown">
-                    <div class="bg-stone-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:bg-aura-brown transition">
-                        <i data-lucide="sofa" class="text-aura-brown group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Living Room & Bedroom Interiors</h3>
-                    <p class="text-stone-500">Creating comfortable and stylish spaces that reflect your personality.</p>
-                </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition group">
-                    <div class="bg-stone-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:bg-aura-brown transition">
-                        <i data-lucide="lightbulb" class="text-aura-brown group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">False Ceiling & Lighting</h3>
-                    <p class="text-stone-500">Innovative ceiling designs with perfect lighting solutions.</p>
-                </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition group">
-                    <div class="bg-stone-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:bg-aura-brown transition">
-                        <i data-lucide="grid" class="text-aura-brown group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Wall Decor & Furnishings</h3>
-                    <p class="text-stone-500">Curated decor elements and custom furnishings to complete your space.</p>
-                </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition group">
-                    <div class="bg-stone-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:bg-aura-brown transition">
-                        <i data-lucide="key" class="text-aura-brown group-hover:text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Turnkey Interior Solutions</h3>
-                    <p class="text-stone-500">End-to-end project management from concept to completion.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="process" class="py-24 bg-white">
-        <div class="container mx-auto px-6 text-center">
-          <span class="bg-[#F9F5EB] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded">How We Work</span>
-          <h2 class="text-4xl md:text-5xl mt-6 mb-4">Design Process</h2>
-          <p class="text-stone-500 mb-20">From concept to completion, we guide you through every step</p>
-      
-          <div class="flex flex-col md:flex-row gap-8">
-            <div class="flex-1 text-center">
-              <div class="w-12 h-12 bg-aura-brown text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">1</div>
-              <div class="bg-[#F9F5EB] p-6 rounded-lg">
-                <h4 class="font-bold mb-2">Consultation</h4>
-                <p class="text-sm text-stone-500">Understanding your needs, preferences, and budget</p>
-              </div>
-            </div>
-      
-            <div class="flex-1 text-center">
-              <div class="w-12 h-12 bg-[#B18E72] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">2</div>
-              <div class="bg-[#F9F5EB] p-6 rounded-lg">
-                <h4 class="font-bold mb-2">3D Design & Planning</h4>
-                <p class="text-sm text-stone-500">Creating detailed designs and visualizations</p>
-              </div>
-            </div>
-      
-            <div class="flex-1 text-center">
-              <div class="w-12 h-12 bg-aura-brown text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">3</div>
-              <div class="bg-[#F9F5EB] p-6 rounded-lg">
-                <h4 class="font-bold mb-2">Material Selection</h4>
-                <p class="text-sm text-stone-500">Choosing the finest materials and finishes</p>
-              </div>
-            </div>
-      
-            <div class="flex-1 text-center">
-              <div class="w-12 h-12 bg-aura-brown text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">4</div>
-              <div class="bg-[#F9F5EB] p-6 rounded-lg">
-                <h4 class="font-bold mb-2">Execution & Supervision</h4>
-                <p class="text-sm text-stone-500">Professional implementation with quality control</p>
-              </div>
-            </div>
-      
-            <div class="flex-1 text-center">
-              <div class="w-12 h-12 bg-aura-brown text-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold">5</div>
-              <div class="bg-[#F9F5EB] p-6 rounded-lg">
-                <h4 class="font-bold mb-2">Handover & Completion</h4>
-                <p class="text-sm text-stone-500">Final touches and project delivery</p>
-              </div>
-            </div>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="eyebrow">Interior design & decor studio</p>
+          <h1 id="hero-title">Homes with quiet luxury, warmth and soul</h1>
+          <p class="hero-text">AURA SPACE interior & decor designs kitchens, wardrobes, living rooms and complete homes with a polished, personal finish.</p>
+          <div class="hero-actions">
+            <a class="primary-btn" href="#consultation">Start my quote</a>
+            <a class="secondary-btn" href="#gallery">View projects</a>
           </div>
-      
-          <!-- CTA -->
-          <div class="mt-20 bg-[#F9F5EB] py-12 px-6 rounded-3xl">
-            <i data-lucide="check-circle" class="mx-auto mb-4 text-aura-brown w-10 h-10"></i>
-            <h3 class="text-2xl font-bold mb-2">Ready to Transform Your Space?</h3>
-            <p class="text-stone-500 mb-6">Let's bring your vision to life with our proven design process</p>
-      
-            <button onclick="openProcessPopup()"
-              class="bg-aura-brown text-white px-8 py-3 rounded-full font-semibold hover:scale-105 transition">
-              Start Your Project
-            </button>
+          <div class="trust-row" aria-label="Company highlights">
+            <span><strong>Design</strong> moodboard + layout</span>
+            <span><strong>Build</strong> modular execution</span>
+            <span><strong>Decor</strong> final styling</span>
           </div>
         </div>
-      </section>
-      
-      <!-- POPUP -->
-      <div id="processPopup" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-        <div class="bg-white rounded-2xl max-w-md w-full p-8 relative text-center">
-          <button onclick="closeProcessPopup()"
-            class="absolute top-4 right-4 text-xl font-bold">&times;</button>
-      
-          <h3 class="text-2xl font-bold mb-4">Start Your Interior Project</h3>
-          <p class="text-stone-500 mb-6">Contact us for a free consultation and design discussion</p>
-      
-          <a href="https://wa.me/918121454316"
-            class="block bg-green-500 text-white py-3 rounded-full font-semibold mb-3">
-            Chat on WhatsApp
-          </a>
-      
-          <a href="tel:8121454316"
-            class="block bg-aura-brown text-white py-3 rounded-full font-semibold">
-            Call Now
-          </a>
-        </div>
-      </div>
-      
-      <script>
-      function openProcessPopup() {
-        document.getElementById("processPopup").classList.remove("hidden");
-        document.getElementById("processPopup").classList.add("flex");
-      }
-      
-      function closeProcessPopup() {
-        document.getElementById("processPopup").classList.add("hidden");
-      }
-      </script>
-      
 
-    <section id="portfolio" class="py-24">
-        <div class="container mx-auto px-6 text-center">
-          <span class="bg-white/50 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded">Our Work</span>
-          <h2 class="text-4xl md:text-5xl mt-6 mb-4">Portfolio</h2>
-          <p class="text-stone-500 mb-12">Explore our stunning interior design projects</p>
-      
-          <!-- FILTER BUTTONS -->
-          <div class="flex flex-wrap justify-center gap-4 mb-12">
-            <button class="filter-btn px-6 py-2 rounded-full bg-white"
-                    onclick="filterPortfolio('all', this)">All</button>
-      
-            <button class="filter-btn px-6 py-2 rounded-full bg-white"
-                    onclick="filterPortfolio('living', this)">Living Room</button>
-      
-            <button class="filter-btn px-6 py-2 rounded-full bg-white"
-                    onclick="filterPortfolio('bedroom', this)">Bedroom</button>
-      
-            <button class="filter-btn px-6 py-2 rounded-full bg-white"
-                    onclick="filterPortfolio('kitchen', this)">Kitchen</button>
-      
-            <button class="filter-btn px-6 py-2 rounded-full bg-white"
-                    onclick="filterPortfolio('dining', this)">Dining</button>
-      
-            <button class="filter-btn px-6 py-2 rounded-full bg-white"
-                    onclick="filterPortfolio('wardrobe', this)">Wardrobe</button>
-          </div>
-      
-          <!-- PORTFOLIO GRID -->
-          <div class="grid md:grid-cols-3 gap-8 text-left">
-      
-            <div class="portfolio-item living bg-white rounded-2xl overflow-hidden shadow-sm">
-             <img src="living_room.jpg" alt="Living Room Interior"
-                         class="w-full h-64 object-cover">
-
-            </div>
-      
-            <div class="portfolio-item bedroom bg-white rounded-2xl overflow-hidden shadow-sm">
-              <img src="bedroom.jpg" alt="bedroom interior"
-                   class="w-full h-64 object-cover">
-            </div>
-      
-            <div class="portfolio-item kitchen bg-white rounded-2xl overflow-hidden shadow-sm">
-              <img src="kitchen.jpg" alt="kitchen interior"
-                   class="w-full h-64 object-cover">
-            </div>
-      
-            <div class="portfolio-item living bg-white rounded-2xl overflow-hidden shadow-sm">
-              <img src="living_room_2.jpg" alt="living interior"
-                   class="w-full h-64 object-cover">
-            </div>
-      
-            <div class="portfolio-item dining bg-white rounded-2xl overflow-hidden shadow-sm">
-              <img src="dining.jpg" alt="dining"
-                  class="w-full h-64 object-cover">
-            </div>
-       <div class="portfolio-item wardrobe bg-white rounded-2xl overflow-hidden shadow-sm">
-              <img src="wardrobe.jpg" alt="warderob "
-                   class="w-full h-64 object-cover">
-            </div>
-            <div class="portfolio-item wardrobe bg-white rounded-2xl overflow-hidden shadow-sm">
-              <img src="wardrobe2.jpg" alt=" warderob interior"
-                   class="w-full h-64 object-cover">
-            </div>
-      
-          </div>
-        </div>
-      </section>
-      
-      <script>
-      function filterPortfolio(category, clickedBtn) {
-        const items = document.querySelectorAll('.portfolio-item');
-        const buttons = document.querySelectorAll('.filter-btn');
-      
-        // Reset all buttons
-        buttons.forEach(btn => {
-          btn.classList.remove('bg-aura-brown', 'text-white');
-          btn.classList.add('bg-white');
-        });
-      
-        // Activate clicked button
-        clickedBtn.classList.remove('bg-white');
-        clickedBtn.classList.add('bg-aura-brown', 'text-white');
-      
-        // Filter portfolio items
-        items.forEach(item => {
-          if (category === 'all' || item.classList.contains(category)) {
-            item.style.display = 'block';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      }
-      
-      /* DEFAULT ACTIVE = ALL */
-      window.onload = function () {
-        const firstBtn = document.querySelector('.filter-btn');
-        filterPortfolio('all', firstBtn);
-      };
-      </script>
-      
-      
-
-    <section class="py-24 bg-white/50">
-        <div class="container mx-auto px-6 text-center">
-            <span class="bg-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded">Why AURA SPACE</span>
-            <h2 class="text-4xl md:text-5xl mt-6 mb-4">Why Choose Us</h2>
-            <p class="text-stone-500 mb-16">Experience the AURA SPACE difference in every project</p>
-            
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-[#F9F5EB] p-10 rounded-2xl">
-                    <div class="w-12 h-12 bg-aura-brown text-white rounded-lg flex items-center justify-center mx-auto mb-6"><i data-lucide="sparkles"></i></div>
-                    <h4 class="font-bold mb-3">Creative & Customized Designs</h4>
-                    <p class="text-sm text-stone-500">Unique solutions tailored to your vision</p>
-                </div>
-                <div class="bg-[#F9F5EB] p-10 rounded-2xl">
-                    <div class="w-12 h-12 bg-aura-brown text-white rounded-lg flex items-center justify-center mx-auto mb-6"><i data-lucide="award"></i></div>
-                    <h4 class="font-bold mb-3">Quality Workmanship</h4>
-                    <p class="text-sm text-stone-500">Attention to detail in every project</p>
-                </div>
-                <div class="bg-[#F9F5EB] p-10 rounded-2xl">
-                    <div class="w-12 h-12 bg-aura-brown text-white rounded-lg flex items-center justify-center mx-auto mb-6"><i data-lucide="check-circle"></i></div>
-                    <h4 class="font-bold mb-3">Transparent Process</h4>
-                    <p class="text-sm text-stone-500">Clear communication at every stage</p>
-                </div>
-                <div class="bg-[#F9F5EB] p-10 rounded-2xl">
-                    <div class="w-12 h-12 bg-aura-brown text-white rounded-lg flex items-center justify-center mx-auto mb-6"><i data-lucide="clock"></i></div>
-                    <h4 class="font-bold mb-3">On-Time Delivery</h4>
-                    <p class="text-sm text-stone-500">Committed to project timelines</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="feedback" class="py-24">
-        <div class="container mx-auto px-6 text-center">
-            <span class="bg-white/50 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded">Client Feedback</span>
-            <h2 class="text-4xl md:text-5xl mt-6 mb-4">What Our Clients Say</h2>
-            <p class="text-stone-500 mb-16">Real experiences from our satisfied clients</p>
-            
-            <div class="grid md:grid-cols-3 gap-8 text-left">
-                <div class="bg-[#F9F5EB] p-8 rounded-2xl relative">
-                    <div class="text-aura-brown flex mb-4">★★★★★</div>
-                    <p class="italic text-stone-600 mb-6">Very happy with Aura Space work they designed our kitchen and bedroom perfectly quality is good and work completed on time</p>
-                    <hr class="border-stone-200 mb-4">
-                    <div class="font-bold">satyanarayana </div>
-                    <div class="text-sm text-stone-400">Houseowner</div>
-                </div>
-                <div class="bg-[#F9F5EB] p-8 rounded-2xl">
-                    <div class="text-aura-brown flex mb-4">★★★★★</div>
-                    <p class="italic text-stone-600 mb-6">Professional execution & beautiful finish. Highly recommended Their attention to detail and commitment to quality is exceptional</p>
-                    <hr class="border-stone-200 mb-4">
-                    <div class="font-bold"> anish sharma</div>
-                    <div class="text-sm text-stone-400">flat owner</div>
-                </div>
-                <div class="bg-[#F9F5EB] p-8 rounded-2xl">
-                    <div class="text-aura-brown flex mb-4">★★★★★</div>
-                    <p class="italic text-stone-600 mb-6"> Interior team is professional and friendly They explained everything clearly and handled complete interior work without stress</p>
-                    <hr class="border-stone-200 mb-4">
-                    <div class="font-bold"> Vinay kumar </div>
-                    <div class="text-sm text-stone-400">Owner</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <section id="contact" class="py-24 bg-white">
-  <div class="container mx-auto px-6">
-    <div class="text-center mb-16">
-      <span class="bg-[#F9F5EB] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded">Get In Touch</span>
-      <h2 class="text-4xl md:text-5xl mt-6 mb-4">Contact Us</h2>
-      <p class="text-stone-500">Ready to transform your space? Let's start the conversation</p>
-    </div>
-
-    <div class="flex flex-col lg:flex-row gap-16">
-
-      <!-- LEFT INFO -->
-      <div class="lg:w-1/2">
-        <h3 class="text-2xl font-bold mb-6">Let's Create Something Beautiful Together</h3>
-        <p class="text-stone-500 mb-10">
-          Whether you're looking to redesign a single room or undertake a complete home renovation,
-          our team is here to help.
-        </p>
-
-        <div class="space-y-6">
-          <div class="flex items-center gap-6 p-6 bg-[#F9F5EB] rounded-2xl">
-            <div class="bg-aura-brown text-white p-3 rounded-xl"><i data-lucide="phone"></i></div>
-            <div>
-              <p class="text-xs text-stone-400 uppercase">Phone</p>
-              <p class="font-bold text-lg text-aura-brown">81 21 4543 16</p>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-6 p-6 bg-[#F9F5EB] rounded-2xl">
-            <div class="bg-aura-brown text-white p-3 rounded-xl"><i data-lucide="mail"></i></div>
-            <div>
-              <p class="text-xs text-stone-400 uppercase">Email</p>
-              <p class="font-bold text-lg text-aura-brown">auraspaceinteriorss@gmail.com</p>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-6 p-6 bg-[#F9F5EB] rounded-2xl">
-            <div class="bg-aura-brown text-white p-3 rounded-xl"><i data-lucide="map-pin"></i></div>
-            <div>
-              <p class="text-xs text-stone-400 uppercase">Location</p>
-              <p class="font-bold text-lg text-aura-brown">HYDERABAD/WARANGAL</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FORM -->
-      <div class="lg:w-1/2 bg-white shadow-2xl rounded-3xl p-10 border border-stone-100">
-        <div class="space-y-6">
-
-          <div>
-            <label class="block text-sm font-medium mb-2">Full Name *</label>
-            <input id="name" type="text" placeholder="Your name"
-              class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-aura-brown">
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2">Email Address *</label>
-            <input id="email" type="email" placeholder="Youremail@gmail.com"
-              class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-aura-brown">
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2">Phone Number *</label>
-            <input id="phone" type="text" placeholder="+91 98765 43210"
-              class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-aura-brown">
-          </div>
-
-          <!-- SELECT -->
-          <div>
-            <label class="block text-sm font-medium mb-2">Property Type *</label>
-            <select id="property"
-              class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-aura-brown">
-              <option value="">Select Property</option>
+        <form class="lead-form" id="consultation" aria-label="Book a free design consultation">
+          <p class="form-kicker">Free quote on WhatsApp</p>
+          <h2>Start my quote</h2>
+          <p>Share a few details and continue on WhatsApp for your interior consultation.</p>
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Mobile number
+            <input type="tel" name="phone" placeholder="+91 8121 45 4316" required>
+          </label>
+          <label>
+            Area / location
+            <input type="text" name="location" placeholder="Gachibowli, Kondapur, etc." required>
+          </label>
+          <label>
+            Home type
+            <select name="home-type" required>
+              <option value="">Select home type</option>
               <option>2 BHK</option>
               <option>3 BHK</option>
-              <option>4 BHK</option>
               <option>Villa</option>
-              <option>Independent House</option>
+              <option>Renovation</option>
             </select>
-          </div>
-
-          <div>
-            <label class="block text-sm font-medium mb-2">Your Message *</label>
-            <textarea id="message" rows="4" placeholder="Tell us about your project..."
-              class="w-full px-4 py-3 rounded-lg bg-stone-50 border border-stone-200 focus:ring-2 focus:ring-aura-brown"></textarea>
-          </div>
-
-          <!-- WHATSAPP BUTTON -->
-          <button onclick="sendToWhatsApp()"
-            class="w-full bg-green-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-green-700 transition">
-            Send on WhatsApp <i data-lucide="send" class="w-4 h-4"></i>
-          </button>
-
-        </div>
+          </label>
+          <label>
+            Approx budget
+            <select name="budget" required>
+              <option value="">Select budget</option>
+              <option>Below Rs. 3L</option>
+              <option>Rs. 3L - Rs. 6L</option>
+              <option>Rs. 6L - Rs. 10L</option>
+              <option>Rs. 10L+</option>
+            </select>
+          </label>
+          <button type="submit">Start my quote on WhatsApp</button>
+          <small>By submitting, you agree to be contacted by AURA SPACE interior & decor.</small>
+        </form>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<script>
-function sendToWhatsApp() {
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const phone = document.getElementById("phone").value;
-  const property = document.getElementById("property").value;
-  const message = document.getElementById("message").value;
+    <section class="proof-band" aria-label="AURA SPACE interior and decor benefits">
+      <div>
+        <strong>Concept-first design</strong>
+        <span>Palette, storage and furniture direction before execution.</span>
+      </div>
+      <div>
+        <strong>Made for daily life</strong>
+        <span>Durable modular furniture with practical details.</span>
+      </div>
+      <div>
+        <strong>WhatsApp quote flow</strong>
+        <span>Enquiries go straight to consultation chat.</span>
+      </div>
+      <div>
+        <strong>Decor finishing</strong>
+        <span>Lighting, accents and styling for a complete look.</span>
+      </div>
+    </section>
 
-  const text =
-    `Hello AURA SPACE,%0A%0A` +
-    `Name: ${name}%0A` +
-    `Email: ${email}%0A` +
-    `Phone: ${phone}%0A` +
-    `Property Type: ${property}%0A` +
-    `Message: ${message}`;
+    <section class="section intro">
+      <div class="section-heading">
+        <p class="eyebrow">What we do</p>
+        <h2>A finished-home feeling, not just furniture</h2>
+      </div>
+      <p class="section-lead">We blend interior planning with decor styling: warm materials, smart storage, soft lighting, wall treatments and finishing pieces that make your home feel complete.</p>
+    </section>
 
-  window.open(`https://wa.me/918121454316?text=${text}`, "_blank");
-}
-</script>
-
-
-    <footer class="bg-[#4A3728] text-stone-300 py-20">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-1">
-                    <h2 class="text-white text-3xl serif mb-6">AURA SPACE</h2>
-                    <p class="mb-8">Elevating everyday spaces with elegant design and exceptional craftsmanship.</p>
-                  <div class="flex gap-4">
-    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
-        <i data-lucide="facebook" class="w-5 h-5"></i>
-    </a>
-
-    <a href="https://www.instagram.com/_aura_space/" target="_blank"
-       class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
-        <i data-lucide="instagram" class="w-5 h-5"></i>
-    </a>
-
-    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
-        <i data-lucide="linkedin" class="w-5 h-5"></i>
-    </a>
-</div>
-
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#home" class="hover:text-white transition">Home</a></li>
-                        <li><a href="#about" class="hover:text-white transition">About</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Services</a></li>
-                        <li><a href="#portfolio" class="hover:text-white transition">Portfolio</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6">Our Services</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#services" class="hover:text-white transition">Interior Design</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Modular Kitchen</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Custom Furniture</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Decor Solutions</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-white font-bold mb-6">Contact Info</h4>
-                    <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-aura-brown"></i> 81 21 4543 16</li>
-                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-aura-brown"></i> @auraspaceinteriorss@gmail.com</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-aura-brown"></i> HYDERABAD / WARANGAL India</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-white/10 pt-8 flex flex-col md:row justify-between text-xs items-center gap-4">
-                <p>&copy; 2022 AURA SPACE. All rights reserved.</p>
-                <div class="flex gap-8">
-                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition">Terms of Service</a>
-                </div>
-            </div>
+    <section class="services" id="services" aria-label="Interior services">
+      <article class="service service-large">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80" alt="Warm modern living room interior">
+        <div>
+          <h3>Full home makeovers</h3>
+          <p>Living, dining, bedrooms, storage, lighting, wall design and decor planned as one story.</p>
         </div>
-    </footer>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Modern modular kitchen">
+        <div>
+          <h3>Kitchen stories</h3>
+          <p>Smart counters, tall units, task lighting and easy-clean finishes for everyday cooking.</p>
+        </div>
+      </article>
+      <article class="service">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="Bedroom with custom wardrobe">
+        <div>
+          <h3>Wardrobes and decor</h3>
+          <p>Storage, dressing corners, mirrors, wall textures and decor accents that fit your routine.</p>
+        </div>
+      </article>
+    </section>
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-    </script>
+    <section class="section split" id="gallery">
+      <div class="split-copy">
+        <p class="eyebrow">Project gallery</p>
+        <h2>A mood that feels premium the moment you enter</h2>
+        <p>Choose from modern luxe, warm minimal, Indian contemporary, rental-ready and statement decor themes. We tune the palette, lighting and furniture to your space instead of forcing a template.</p>
+        <a class="text-link" href="#consultation">Start my quote</a>
+      </div>
+      <div class="gallery-grid" data-project-gallery aria-label="Interior design gallery">
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=900&q=80" alt="Dining and living room with neutral furniture">
+          <div>
+            <strong>Warm dining lounge</strong>
+            <span>Neutral living and dining styling</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Contemporary living room with wood and stone">
+          <div>
+            <strong>Modern luxe living</strong>
+            <span>Wood, stone and soft lighting</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Luxury bedroom interior">
+          <div>
+            <strong>Calm bedroom suite</strong>
+            <span>Wardrobe and decor concept</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="section-heading">
+        <p class="eyebrow">How it works</p>
+        <h2 id="process-title">A simple path from idea to installation</h2>
+      </div>
+      <div class="steps">
+        <article>
+          <span>01</span>
+          <h3>Free design call</h3>
+          <p>Share your floor plan, location, home type and budget through WhatsApp.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Moodboard and quote</h3>
+          <p>Review the design direction, room priorities, material options and estimate.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Execution and decor</h3>
+          <p>Approved designs move into modular work, site coordination and final styling.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="pricing-copy">
+        <p class="eyebrow">Quote guide</p>
+        <h2>Packages shaped around your room, budget and style</h2>
+        <p>Start with a kitchen or wardrobe, refresh one room with decor, or plan a complete-home look. Final quote depends on size, finish, hardware and site scope.</p>
+      </div>
+      <div class="price-cards">
+        <article>
+          <h3>Room Refresh</h3>
+          <p class="price">From Rs. 2.75L</p>
+          <span>Wardrobes, wall accents, lighting and decor basics.</span>
+        </article>
+        <article class="featured-price">
+          <h3>Complete Home</h3>
+          <p class="price">From Rs. 5.50L</p>
+          <span>Kitchen, storage, furniture, lighting and styling.</span>
+        </article>
+        <article>
+          <h3>Signature Decor</h3>
+          <p class="price">Custom quote</p>
+          <span>Premium finishes, feature walls, bespoke furniture and styling.</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="testimonials" aria-label="Customer testimonials">
+      <article>
+        <p>"AURA SPACE understood our taste quickly and turned our 3 BHK into a warm, useful home. The storage ideas were excellent."</p>
+        <strong>Priya R.</strong>
+        <span>Kondapur</span>
+      </article>
+      <article>
+        <p>"The team was clear about cost and timelines. We loved seeing the 3D design before finalizing materials."</p>
+        <strong>Arjun M.</strong>
+        <span>Gachibowli</span>
+      </article>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <div>
+        <p class="eyebrow">Questions</p>
+        <h2 id="faq-title">Before you book</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Do you handle only Hyderabad projects?</summary>
+          <p>We currently prioritize Hyderabad and nearby areas for site measurement, supervision and installation support.</p>
+        </details>
+        <details>
+          <summary>Can I get only a kitchen or wardrobe?</summary>
+          <p>Yes. You can start with one room, one kitchen, wardrobes or a complete home package.</p>
+        </details>
+        <details>
+          <summary>How soon can work start?</summary>
+          <p>After consultation, site measurement and design approval, production can be scheduled based on material availability and project size.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <h2>Ready for your AURA SPACE quote?</h2>
+      <p>Send your details to WhatsApp and get a consultation for interiors, decor and modular work.</p>
+      <a class="primary-btn" href="#consultation">Start my quote</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">
+      <span class="brand-mark">A</span>
+      <span>AURA SPACE <small>interior & decor</small></span>
+    </div>
+    <p>Premium home interiors, modular kitchens and storage solutions in Hyderabad.</p>
+    <div class="footer-contact">
+      <a href="tel:+918121454316">+91 8121 45 4316</a>
+      <a href="https://www.instagram.com/_aura_space" target="_blank" rel="noreferrer">@_aura_space</a>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
