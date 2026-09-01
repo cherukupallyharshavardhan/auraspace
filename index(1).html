@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AURA SPACE — Interiors, Materials & Design</title>
+<meta name="description" content="AURA SPACE — premium interior design, materials, modular kitchens, wardrobes, laminates, plywood, hardware and complete interior solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#17201d;--ink2:#26322e;--cream:#f7f4ee;--sand:#e9e1d4;
+  --gold:#b48a4a;--gold2:#d1ad72;--muted:#747b76;--white:#fff;
+  --line:#ddd7cc;--green:#214b3b;--wa:#25d366;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;background:var(--cream);color:var(--ink);line-height:1.5}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+img{display:block;max-width:100%}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.topbar{background:var(--ink);color:#fff;font-size:12px;padding:8px 0;text-align:center;letter-spacing:.3px}
+header{background:rgba(247,244,238,.96);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{font-family:"Playfair Display",serif;font-size:29px;font-weight:700;letter-spacing:1px}
+.logo span{color:var(--gold)}
+.logo small{display:block;font:500 8px "DM Sans";letter-spacing:3px;margin-top:-5px;color:var(--muted)}
+nav{display:flex;gap:25px;align-items:center}
+nav a{font-size:14px;font-weight:600}
+nav a:hover{color:var(--gold)}
+.nav-actions{display:flex;gap:10px;align-items:center}
+.icon-btn{border:1px solid var(--line);background:#fff;border-radius:50%;width:42px;height:42px;position:relative}
+.cart-count{position:absolute;right:-3px;top:-4px;background:var(--gold);color:#fff;border-radius:50%;font-size:10px;width:19px;height:19px;display:grid;place-items:center}
+.menu{display:none}
+
+.hero{background:var(--ink);color:#fff;overflow:hidden}
+.hero-grid{min-height:590px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:45px}
+.eyebrow{color:var(--gold2);font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:17px}
+.hero h1{font:700 clamp(42px,6vw,72px)/1.03 "Playfair Display",serif;max-width:680px}
+.hero h1 em{color:var(--gold2);font-style:normal}
+.hero p{color:#c9cec9;font-size:17px;max-width:560px;margin:22px 0 30px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:0;padding:13px 21px;font-weight:700;font-size:14px;border-radius:3px;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-gold{background:var(--gold);color:#fff}.btn-gold:hover{background:#9f783e}
+.btn-light{background:#fff;color:var(--ink)}.btn-outline{border:1px solid #59635e;color:#fff;background:transparent}
+.hero-image{height:475px;border-radius:4px;overflow:hidden;position:relative;background:linear-gradient(135deg,#39443f,#151b19)}
+.hero-image img{width:100%;height:100%;object-fit:cover;opacity:.78}
+.hero-badge{position:absolute;left:20px;bottom:20px;background:rgba(23,32,29,.9);padding:15px 18px;border-left:3px solid var(--gold)}
+.hero-badge strong{display:block;color:#fff}.hero-badge span{font-size:12px;color:#c9cec9}
+
+.trust{background:#fff;border-bottom:1px solid var(--line);padding:24px 0;overflow:hidden}
+.trust-title{text-align:center;text-transform:uppercase;letter-spacing:2px;font-size:10px;color:var(--muted);font-weight:700;margin-bottom:18px}
+.logo-track{display:flex;width:max-content;animation:scroll 28s linear infinite}
+.logo-set{display:flex;align-items:center;gap:54px;padding-right:54px}
+.brand-logo{font-weight:800;color:#636a66;font-size:20px;white-space:nowrap;filter:grayscale(1);opacity:.82}
+.brand-logo small{font-size:9px;font-weight:600;display:block;letter-spacing:1px;text-align:center}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+.section{padding:75px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}
+.section-head h2{font:700 40px/1.1 "Playfair Display",serif}
+.section-head p{color:var(--muted);max-width:560px;font-size:14px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.service{background:#fff;border:1px solid var(--line);padding:25px;min-height:185px}
+.service-icon{font-size:28px;margin-bottom:20px}.service h3{font-size:17px;margin-bottom:8px}.service p{font-size:13px;color:var(--muted)}
+.service:hover{transform:translateY(-3px);transition:.2s;box-shadow:0 12px 35px #1d29250d}
+
+.catalog-section{background:#f0ece4}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:25px}
+.filter{border:1px solid var(--line);background:#fff;padding:9px 15px;border-radius:20px;font-size:12px;font-weight:600}
+.filter.active,.filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.search{border:1px solid var(--line);background:#fff;padding:12px 15px;width:270px;outline:none}
+.filter-row{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:25px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.product-img{height:205px;background:#e6e0d5;position:relative;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.product:hover .product-img img{transform:scale(1.04)}
+.tag{position:absolute;top:12px;left:12px;background:#fff;padding:5px 8px;font-size:9px;text-transform:uppercase;letter-spacing:1px;font-weight:800}
+.product-body{padding:16px;display:flex;flex-direction:column;flex:1}
+.product-cat{font-size:10px;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.product h3{font-size:16px;margin:6px 0 3px}.brand{font-size:12px;color:var(--muted);margin-bottom:13px}
+.price{font-size:18px;font-weight:800}.unit{font-size:10px;color:var(--muted);font-weight:500}
+.product-actions{display:flex;gap:7px;margin-top:auto;padding-top:14px}
+.add{flex:1;border:0;background:var(--ink);color:#fff;padding:10px;font-size:12px;font-weight:700}
+.details{border:1px solid var(--line);background:#fff;padding:10px;font-size:12px}
+.add:hover{background:var(--gold)}
+
+.quote{background:var(--green);color:#fff}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.quote h2{font:700 42px/1.1 "Playfair Display",serif;margin-bottom:15px}.quote p{color:#cbd5cf;font-size:15px}
+.quote-list{margin-top:24px;display:grid;gap:12px}.quote-list div{font-size:13px}.quote-list span{color:var(--gold2);margin-right:8px}
+.form{background:#fff;color:var(--ink);padding:27px}
+.form h3{font-size:22px;margin-bottom:18px}
+.form input,.form textarea,.form select{width:100%;padding:12px;border:1px solid var(--line);margin-bottom:11px;font:14px "DM Sans";outline:none}
+.form textarea{height:100px;resize:vertical}
+
+.gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:210px 210px;gap:12px}
+.gallery-item{overflow:hidden;position:relative}.gallery-item:first-child{grid-row:span 2}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.4s}.gallery-item:hover img{transform:scale(1.04)}
+.gallery-label{position:absolute;left:12px;bottom:12px;background:rgba(23,32,29,.86);color:#fff;padding:7px 10px;font-size:11px}
+
+.delivery{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.delivery-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.delivery h2{font:700 38px "Playfair Display",serif;margin-bottom:12px}.delivery p{color:var(--muted);font-size:14px}
+.delivery-card{background:var(--cream);padding:22px}.delivery-card select{width:100%;padding:13px;border:1px solid var(--line);background:#fff;margin:12px 0}
+.delivery-result{display:none;border-left:3px solid var(--gold);padding:12px;background:#fff}.delivery-result.show{display:block}.delivery-result strong{font-size:23px}
+
+footer{background:var(--ink);color:#d2d6d3;padding:55px 0 105px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}.footer-logo{color:#fff;font:700 28px "Playfair Display"}.footer h4{color:#fff;margin-bottom:15px;font-size:13px}.footer a,.footer p{font-size:12px;color:#aeb6b1;display:block;margin:8px 0}
+.copyright{border-top:1px solid #39423e;margin-top:35px;padding-top:18px;font-size:11px;color:#87908b}
+
+.cart-panel{position:fixed;right:-430px;top:0;width:min(430px,100%);height:100vh;background:#fff;z-index:100;box-shadow:-20px 0 60px #0002;transition:.3s;display:flex;flex-direction:column}
+.cart-panel.open{right:0}.cart-head{padding:22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.cart-head h3{font:700 25px "Playfair Display"}.close{border:0;background:none;font-size:25px}
+.cart-items{padding:18px;overflow:auto;flex:1}.cart-item{display:grid;grid-template-columns:70px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.cart-item img{width:70px;height:70px;object-fit:cover}.cart-item h4{font-size:13px}.cart-item p{font-size:11px;color:var(--muted)}
+.qty{display:flex;gap:7px;align-items:center;margin-top:7px}.qty button{width:23px;height:23px;border:1px solid var(--line);background:#fff}.remove{border:0;background:none;color:#a44;font-size:11px}
+.cart-foot{padding:18px;border-top:1px solid var(--line)}.total{display:flex;justify-content:space-between;font-size:19px;font-weight:800;margin-bottom:13px}.full{width:100%}
+.overlay{position:fixed;inset:0;background:#0007;z-index:90;display:none}.overlay.show{display:block}
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 17px;z-index:120;display:none;font-size:13px}.toast.show{display:block}
+
+@media(max-width:900px){
+  nav{display:none}.menu{display:block;border:1px solid var(--line);background:#fff;padding:9px}
+  .hero-grid,.quote-grid,.delivery-grid{grid-template-columns:1fr}.hero-image{height:360px}
+  .services{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .container{width:min(100% - 28px,1180px)}.nav{height:65px}.logo{font-size:24px}
+  .hero-grid{padding:60px 0}.hero h1{font-size:43px}.hero-image{height:280px}
+  .section{padding:55px 0}.section-head{display:block}.section-head h2{font-size:31px;margin-bottom:8px}
+  .services,.products{grid-template-columns:1fr 1fr;gap:10px}.service{padding:17px;min-height:165px}
+  .product-img{height:150px}.product-body{padding:12px}.product h3{font-size:14px}.price{font-size:16px}
+  .filter-row{display:block}.search{width:100%;margin-top:10px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px}.gallery-item:first-child{grid-row:span 2}
+  .footer-grid{grid-template-columns:1fr 1fr}.brand-logo{font-size:16px}.logo-set{gap:30px;padding-right:30px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">COMPLETE INTERIORS • MATERIALS • MODULAR SOLUTIONS &nbsp; | &nbsp; Serving Hyderabad & Telangana</div>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">AURA <span>SPACE</span><small>INTERIORS & MATERIALS</small></a>
+    <nav>
+      <a href="#services">Services</a><a href="#products">Materials</a><a href="#projects">Projects</a>
+      <a href="#brands">Brands</a><a href="#quote">Get a Quote</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="openCart()" aria-label="Shopping cart">🛒<span class="cart-count" id="navCount">0</span></button>
+      <button class="menu" onclick="document.querySelector('nav').style.display='flex'">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Design • Build • Deliver</div>
+      <h1>Spaces that feel <em>like you.</em></h1>
+      <p>From concept to completion, AURA SPACE brings together interior design, trusted materials, modular solutions and expert execution for beautiful, functional spaces.</p>
+      <div class="cta-row">
+        <a href="#quote" class="btn btn-gold">Start Your Project →</a>
+        <a href="#products" class="btn btn-outline">Explore Materials</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Modern AURA SPACE interior">
+      <div class="hero-badge"><strong>Complete Interior Solutions</strong><span>Design • Materials • Execution</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="brands">
+  <div class="trust-title">Trusted brands we work with</div>
+  <div class="logo-track">
+    <div class="logo-set">
+      <div class="brand-logo">CENTURYPLY</div><div class="brand-logo">GREENPLY</div><div class="brand-logo">GREENLAM</div>
+      <div class="brand-logo">MERINO</div><div class="brand-logo">HETTICH</div><div class="brand-logo">HÄFELE</div>
+      <div class="brand-logo">EBCO</div><div class="brand-logo">GODREJ</div><div class="brand-logo">FEVICOL</div>
+      <div class="brand-logo">REHAU</div><div class="brand-logo">ACTION TESA</div><div class="brand-logo">KITPLY</div>
+    </div>
+    <div class="logo-set" aria-hidden="true">
+      <div class="brand-logo">CENTURYPLY</div><div class="brand-logo">GREENPLY</div><div class="brand-logo">GREENLAM</div>
+      <div class="brand-logo">MERINO</div><div class="brand-logo">HETTICH</div><div class="brand-logo">HÄFELE</div>
+      <div class="brand-logo">EBCO</div><div class="brand-logo">GODREJ</div><div class="brand-logo">FEVICOL</div>
+      <div class="brand-logo">REHAU</div><div class="brand-logo">ACTION TESA</div><div class="brand-logo">KITPLY</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">What we do</div><h2>Everything your space needs.</h2></div><p>One place for design, material selection, procurement and execution — making your interior journey simpler.</p></div>
+    <div class="services">
+      <div class="service"><div class="service-icon">⌂</div><h3>Home Interiors</h3><p>Thoughtful living spaces designed around your lifestyle, taste and budget.</p></div>
+      <div class="service"><div class="service-icon">▦</div><h3>Modular Kitchen</h3><p>Functional kitchens with smart storage, premium finishes and quality hardware.</p></div>
+      <div class="service"><div class="service-icon">▤</div><h3>Wardrobes & Storage</h3><p>Custom wardrobes, TV units and storage solutions with clean detailing.</p></div>
+      <div class="service"><div class="service-icon">◆</div><h3>Materials & Hardware</h3><p>Curated plywood, laminates, panels, hardware, profiles and accessories.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section catalog-section" id="products">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Materials store</div><h2>Build with better materials.</h2></div><p>Browse selected interior materials. Add products to your cart and send your requirement directly to AURA SPACE for a quotation.</p></div>
+    <div class="filter-row">
+      <div class="filters" id="filters"></div>
+      <input class="search" id="search" placeholder="Search materials, brands..." oninput="renderProducts()">
+    </div>
+    <div class="products" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Our inspiration</div><h2>Designed to be lived in.</h2></div><p>Use the gallery as a visual starting point for your next home, office or commercial interior.</p></div>
+    <div class="gallery">
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85" alt="Luxury living room"><div class="gallery-label">Living Spaces</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=85" alt="Modern kitchen"><div class="gallery-label">Modular Kitchens</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=85" alt="Modern interior"><div class="gallery-label">Bedrooms</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=85" alt="Contemporary interior"><div class="gallery-label">Contemporary</div></div>
+      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=800&q=85" alt="Elegant interior"><div class="gallery-label">Details</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="delivery section">
+  <div class="container delivery-grid">
+    <div><div class="eyebrow">Material delivery</div><h2>Need materials at your site?</h2><p>Tell us your area and we'll help coordinate material availability and delivery. Delivery times shown are indicative and should be confirmed with the AURA SPACE team.</p></div>
+    <div class="delivery-card"><strong>Check your area</strong><select id="area"><option value="">Select your area</option><option>Medchal</option><option>Kompally</option><option>Alwal</option><option>Secunderabad</option><option>Kukatpally</option><option>Miyapur</option><option>Gachibowli</option><option>Hitech City</option><option>Uppal</option><option>LB Nagar</option></select><button class="btn btn-gold" onclick="checkDelivery()">Check Delivery</button><div class="delivery-result" id="deliveryResult"><strong id="deliveryTime"></strong><div id="deliveryNote"></div></div></div>
+  </div>
+</section>
+
+<section class="section quote" id="quote">
+  <div class="container quote-grid">
+    <div><div class="eyebrow">Let's create</div><h2>Your dream space starts with one conversation.</h2><p>Share your requirements with AURA SPACE. We'll understand your style, space and budget and guide you toward the right design and materials.</p>
+      <div class="quote-list"><div><span>✓</span> Residential & commercial interiors</div><div><span>✓</span> Material consultation & procurement</div><div><span>✓</span> Modular kitchen & wardrobe solutions</div><div><span>✓</span> Transparent quotation support</div></div>
+    </div>
+    <form class="form" onsubmit="submitQuote(event)"><h3>Get a project quote</h3><input id="qName" required placeholder="Your name"><input id="qPhone" required placeholder="Phone / WhatsApp number"><input id="qLocation" placeholder="Project location"><select id="qType"><option>Home Interior</option><option>Modular Kitchen</option><option>Wardrobe</option><option>Office / Commercial</option><option>Materials Only</option></select><textarea id="qMessage" placeholder="Tell us about your space, requirements or approximate budget"></textarea><button class="btn btn-gold full">Send Requirement on WhatsApp →</button></form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo">AURA SPACE</div><p>Interior design, materials & complete space solutions.</p><p>Hyderabad, Telangana</p></div>
+      <div><h4>Explore</h4><a href="#services">Services</a><a href="#products">Materials</a><a href="#projects">Projects</a><a href="#brands">Brands</a></div>
+      <div><h4>Solutions</h4><a href="#quote">Home Interiors</a><a href="#quote">Modular Kitchen</a><a href="#quote">Wardrobes</a><a href="#quote">Commercial Interiors</a></div>
+      <div><h4>Contact</h4><a href="#quote">Get a Quote</a><a href="tel:+910000000000">Call Us</a><a href="#products">Material Enquiry</a></div>
+    </div>
+    <div class="copyright">© 2026 AURA SPACE. All rights reserved. Product prices are indicative and subject to confirmation.</div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-head"><h3>Your Cart</h3><button class="close" onclick="closeCart()">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot"><div class="total"><span>Total</span><span>₹<span id="cartTotal">0</span></span></div><button class="btn btn-gold full" onclick="orderCart()">Send Cart on WhatsApp →</button><button class="btn full" style="margin-top:7px;background:#eee" onclick="clearCart()">Clear Cart</button></div>
+</aside>
+<div class="toast" id="toast">Added to cart</div>
+
+<script>
+const WA_NUMBER="910000000000"; // Replace with your AURA SPACE WhatsApp number.
+const products=[
+{name:"19mm Plywood — 8x4",brand:"CenturyPly Sainik MR",price:3450,unit:"per sheet",cat:"Plywood & Boards",img:"https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80"},
+{name:"19mm Plywood — 8x4",brand:"Greenply Ecotec BWP",price:3850,unit:"per sheet",cat:"Plywood & Boards",img:"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=700&q=80"},
+{name:"12mm Plywood — 8x4",brand:"CenturyPly Sainik MR",price:2250,unit:"per sheet",cat:"Plywood & Boards",img:"https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=700&q=80"},
+{name:"18mm MDF Board — 8x4",brand:"Action Tesa",price:2650,unit:"per sheet",cat:"Plywood & Boards",img:"https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&q=80"},
+{name:"1mm Laminate Sheet",brand:"Merino Matt Finish",price:1650,unit:"per sheet",cat:"Laminates",img:"https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=700&q=80"},
+{name:"1mm Laminate Sheet",brand:"Greenlam Glossy",price:1450,unit:"per sheet",cat:"Laminates",img:"https://images.unsplash.com/photo-1615529328331-f8917597711f?auto=format&fit=crop&w=700&q=80"},
+{name:"Woodgrain Laminate",brand:"Sunmica",price:1050,unit:"per sheet",cat:"Laminates",img:"https://images.unsplash.com/photo-1617104678098-de229db51175?auto=format&fit=crop&w=700&q=80"},
+{name:"Soft-Close Hinge",brand:"Hettich Sensys",price:180,unit:"per pc",cat:"Hardware",img:"https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=700&q=80"},
+{name:"Telescopic Drawer Channel 18\"",brand:"Hettich",price:420,unit:"per pair",cat:"Hardware",img:"https://images.unsplash.com/photo-1558997519-83ea9252edf8?auto=format&fit=crop&w=700&q=80"},
+{name:"Wardrobe Sliding Channel",brand:"Häfele",price:1250,unit:"per set",cat:"Hardware",img:"https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80"},
+{name:"Cabinet Lock",brand:"Godrej",price:210,unit:"per pc",cat:"Hardware",img:"https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=700&q=80"},
+{name:"Cabinet Handle 6\"",brand:"Häfele Steel",price:140,unit:"per pc",cat:"Handles & Profiles",img:"https://images.unsplash.com/photo-1556912173-46c336c7fd55?auto=format&fit=crop&w=700&q=80"},
+{name:"Profile Handle — Aluminium",brand:"Ebco",price:320,unit:"per meter",cat:"Handles & Profiles",img:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80"},
+{name:"Synthetic Resin Adhesive",brand:"Fevicol SR 998 — 1kg",price:260,unit:"per kg",cat:"Adhesives",img:"https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=700&q=80"},
+{name:"Marine Grade Adhesive",brand:"Fevicol Marine — 1kg",price:310,unit:"per kg",cat:"Adhesives",img:"https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=700&q=80"},
+{name:"PVC Edge Band Tape",brand:"Rehau — 1mm",price:850,unit:"per roll",cat:"Adhesives",img:"https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=700&q=80"},
+{name:"PUF Insulation Panel",brand:"AURA SPACE",price:150,unit:"per sq.ft",cat:"Panels & Ceiling",img:"https://images.unsplash.com/photo-1600566753051-f0b89df2dd90?auto=format&fit=crop&w=700&q=80"},
+{name:"PVC Ceiling Panel",brand:"AURA SPACE",price:65,unit:"per sq.ft",cat:"Panels & Ceiling",img:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"}
+];
+let filter="All",cart={};
+
+function init(){
+ const cats=["All",...new Set(products.map(p=>p.cat))];
+ document.getElementById("filters").innerHTML=cats.map(c=>`<button class="filter ${c==="All"?"active":""}" onclick="setFilter('${c}',this)">${c}</button>`).join("");
+ renderProducts();renderCart();
+}
+function setFilter(c,b){filter=c;document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");renderProducts()}
+function renderProducts(){
+ const q=document.getElementById("search").value.toLowerCase();
+ const list=products.filter(p=>(filter==="All"||p.cat===filter)&&(`${p.name} ${p.brand} ${p.cat}`.toLowerCase().includes(q)));
+ document.getElementById("productGrid").innerHTML=list.map((p,i)=>{
+  const id=products.indexOf(p);
+  return `<article class="product"><div class="product-img"><img src="${p.img}" alt="${p.name} - ${p.brand}" loading="lazy"><span class="tag">${p.cat}</span></div><div class="product-body"><div class="product-cat">${p.cat}</div><h3>${p.name}</h3><div class="brand">${p.brand}</div><div class="price">₹${p.price.toLocaleString("en-IN")} <span class="unit">/ ${p.unit}</span></div><div class="product-actions"><button class="add" onclick="addCart(${id})">＋ Add to Cart</button><button class="details" onclick="showToast('Ask us for specifications & availability')">Details</button></div></div></article>`;
+ }).join("")||"<p>No matching products found.</p>";
+}
+function addCart(id){if(!cart[id])cart[id]=1;else cart[id]++;renderCart();showToast("Added to cart")}
+function changeQty(id,d){cart[id]+=d;if(cart[id]<=0)delete cart[id];renderCart()}
+function clearCart(){cart={};renderCart()}
+function renderCart(){
+ let count=Object.values(cart).reduce((a,b)=>a+b,0),total=0;
+ document.getElementById("navCount").textContent=count;
+ document.getElementById("cartItems").innerHTML=Object.entries(cart).map(([id,qty])=>{let p=products[id];total+=p.price*qty;return `<div class="cart-item"><img src="${p.img}" alt=""><div><h4>${p.name}</h4><p>${p.brand}</p><div class="qty"><button onclick="changeQty(${id},-1)">−</button><b>${qty}</b><button onclick="changeQty(${id},1)">+</button><button class="remove" onclick="changeQty(${id},-${qty})">Remove</button></div></div><strong>₹${(p.price*qty).toLocaleString("en-IN")}</strong></div>`}).join("")||"<p style='color:#777;font-size:14px;padding:20px 0'>Your cart is empty. Add materials to build your enquiry.</p>";
+ document.getElementById("cartTotal").textContent=total.toLocaleString("en-IN");
+}
+function openCart(){document.getElementById("cartPanel").classList.add("open");document.getElementById("overlay").classList.add("show")}
+function closeCart(){document.getElementById("cartPanel").classList.remove("open");document.getElementById("overlay").classList.remove("show")}
+function orderCart(){
+ if(!Object.keys(cart).length)return showToast("Your cart is empty");
+ let lines=["Hi AURA SPACE, I would like a quotation for:",""];
+ Object.entries(cart).forEach(([id,qty])=>{let p=products[id];lines.push(`• ${p.name} — ${p.brand} x${qty} — ₹${p.price*qty}`)});
+ lines.push("",`Estimated total: ₹${document.getElementById("cartTotal").textContent}`,"Please confirm availability, final pricing and delivery.");
+ window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`,"_blank");
+}
+function submitQuote(e){
+ e.preventDefault();
+ const text=`Hi AURA SPACE, I want a project quote.\nName: ${qName.value}\nPhone: ${qPhone.value}\nLocation: ${qLocation.value}\nProject: ${qType.value}\nRequirement: ${qMessage.value}`;
+ window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`,"_blank");
+}
+function checkDelivery(){
+ const a=document.getElementById("area").value;if(!a)return;
+ const fast=["Medchal","Kompally"],std=["Alwal","Secunderabad"],ext=["Kukatpally","Miyapur"];
+ let time=fast.includes(a)?"45 min":std.includes(a)?"60–90 min":ext.includes(a)?"2 hr":"Next day";
+ deliveryTime.textContent=time;deliveryNote.textContent=`Indicative delivery for ${a}. Please confirm stock and route with AURA SPACE.`;deliveryResult.classList.add("show");
+}
+function showToast(t){const x=document.getElementById("toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),1500)}
+init();
+</script>
+</body>
+</html>
